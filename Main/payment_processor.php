@@ -65,6 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['pay_btn'])) {
     $response = curl_exec($curl);
     $response_data = json_decode($response, true);
 
+    // echo json_encode($response_data);
+
     // For error handling and debugging 
     if ($response === false)
         echo "Curl error: " . curl_error($curl);
